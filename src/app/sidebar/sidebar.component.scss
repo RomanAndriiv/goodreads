@@ -1,0 +1,35 @@
+section {
+    border-bottom: 1px solid #D8D8D8;
+    border-top: 1px solid #D8D8D8;
+    margin-bottom: 16px;
+    a {
+        display: inline-block;
+        margin: 0 4px 0 0;
+    }
+    h3 {
+        color: #333333;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.15;
+        margin: 12px 0;
+        text-transform: uppercase;
+    }
+    .all_books {
+        margin: 8px 0;
+        a {
+            color: #00635D;
+            font-size: 14px;
+            text-decoration: none;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.sidebar {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+}
