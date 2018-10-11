@@ -1,0 +1,23 @@
+<form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+  <div class="form-group">
+    <label>Author</label>
+    <input class="form-control" name="author" #author="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Full author">
+  </div>
+  <div class="form-group">
+    <label>Average rate</label>
+    <input class="form-control" name="avr_rat" #avr_rat="ngModel" [(ngModel)]="bookService.selectedBook.avr_rat" placeholder="Full average rate">
+  </div>
+  <div class="form-group">
+    <label>Cover</label>
+    <input class="form-control" name="cover" #cover="ngModel" [(ngModel)]="bookService.selectedBook.cover" placeholder="Full cover">
+  </div>
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" name="title" #title="ngModel" [(ngModel)]="bookService.selectedBook.title" placeholder="Full title">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="button" class="btn btn-default">Delete</button>
+    <button type="button" class="btn btn-default" (click)="resetForm(bookForm)">Reset</button>
+  </div>
+</form>
