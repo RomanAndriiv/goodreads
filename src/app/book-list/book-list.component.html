@@ -1,3 +1,6 @@
-<p>
-  book-list works!
-</p>
+<ul>
+  <li *ngFor="let book of bookList" (click)="onItemClick(book)">
+    {{book.author}} - {{book.title}}
+    {{book.avr_art}} - {{book.cover}}
+  </li>
+</ul>

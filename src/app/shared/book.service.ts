@@ -24,4 +24,17 @@ export class BookService {
       title : book.title
     });
   }
+
+  updateBook(book : Book){
+    this.bookList.update(book.$key, {
+      author : book.author,
+      avr_rat : book.avr_rat,
+      title : book.title,
+      cover : book.cover
+    })
+  }
+
+  deleteBook(key : string){
+    this.bookList.remove(key);
+  }
 }

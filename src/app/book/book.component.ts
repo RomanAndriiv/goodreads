@@ -17,7 +17,10 @@ export class BookComponent implements OnInit {
   }
 
   onSubmit(form : NgForm) {
-    this.bookService.insertBook(form.value);
+    if (form.value.$key == null)  
+      this.bookService.insertBook(form.value);
+    else
+      this.bookService.updateBook(form.value);
     this.resetForm(form);
   }
 
@@ -25,11 +28,18 @@ export class BookComponent implements OnInit {
     if (form != null)
       form.reset();
     this.bookService.selectedBook = {
-      $key: '',
+      $key: null,
       author: '',
       avr_rat: 0,
       cover: '',
       title: '',
+    }
+  }
+
+  onDelete(form : NgForm){
+    if(confirm('Are you sure to delete this book?') === true){
+      this.bookService.deleteBook(form.value.$key);
+      this.resetForm(form);
     }
   }
 

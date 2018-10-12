@@ -1,7 +1,8 @@
 <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="bookService.selectedBook.$key">
   <div class="form-group">
     <label>Author</label>
-    <input class="form-control" name="author" #author="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Full author">
+    <input class="form-control" name="author" #author="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Full author" required>
   </div>
   <div class="form-group">
     <label>Average rate</label>
@@ -16,8 +17,8 @@
     <input class="form-control" name="title" #title="ngModel" [(ngModel)]="bookService.selectedBook.title" placeholder="Full title">
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-default">Submit</button>
-    <button type="button" class="btn btn-default">Delete</button>
+    <button type="submit" class="btn btn-default" [disabled]="!bookForm.valid">Submit</button>
+    <button type="button" class="btn btn-default" *ngIf="bookService.selectedBook.$key != null" (click)="onDelete(bookForm)">Delete</button>
     <button type="button" class="btn btn-default" (click)="resetForm(bookForm)">Reset</button>
   </div>
 </form>
