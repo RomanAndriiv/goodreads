@@ -1,6 +1,44 @@
-<ul>
-  <li *ngFor="let book of bookList" (click)="onItemClick(book)">
-    {{book.author}} - {{book.title}}
-    {{book.avr_art}} - {{book.cover}}
-  </li>
-</ul>
+<main>
+  <app-book></app-book>
+  <table class="books">
+    <thead>
+      <tr id="booksHeader" class="tableList">
+        <th alt="cover" class="header field cover">
+          <a>cover</a>
+        </th>
+        <th alt="title" class="header field title">
+          <a>title</a>
+        </th>
+        <th alt="author" class="header field author">
+          <a>author</a>
+        </th>
+        <th alt="avg_rating" class="header field avg_rating">
+          <a>avg rating</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="booksBody">
+      <tr class="bookalike review" *ngFor="let book of bookList" (click)="onItemClick(book)">
+        <td class="field cover">
+          <div class="value">
+            <div>
+              <div><a><img alt="{{book.title}}" src="{{book.cover}}"></a></div>
+            </div>
+          </div>
+        </td>
+        <td class="field title">
+          <div class="value"><a title="{{book.title}}">
+              {{book.title}}
+            </a></div>
+        </td>
+        <td class="field author">
+          <div class="value"><a>{{book.author}}</a>
+          </div>
+        </td>
+        <td class="field avg_rating">
+          <div class="value">{{book.avr_rat}}</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

@@ -1,0 +1,9 @@
+.app-book-list {
+    display: flex;
+}
+.books {
+    border-collapse: collapse;
+    img {
+        max-height: 150px;
+    }
+}

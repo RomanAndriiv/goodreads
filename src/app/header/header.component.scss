@@ -41,9 +41,19 @@ header {
     nav {
         display: inline-block;
         margin: 0 15px;
-        vertical-align: top;
         ul {
             li {
+                a {
+                    color: #382110;
+                    font-size: 16px;
+                    padding: 17px 15px;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: #382110;
+                        color: #FFFFFF;
+                        cursor: pointer;
+                    }
+                }
                 &:first-child {
                     height: 50px;
                     &:hover {
@@ -57,21 +67,9 @@ header {
                         background-size: 140px 30px;
                         display: inline-block;
                         height: 50px;
+                        padding: 0 15px;
                         width: 150px;
                     }
-                }
-                &:hover {
-                    background-color: #382110;
-                    cursor: pointer;
-                    a {
-                        color: #FFFFFF;
-                    }
-                }
-                a {
-                    color: #382110;
-                    font-size: 16px;
-                    line-height: 50px;
-                    padding: 0 15px;
                 }
             }
         }
@@ -82,7 +80,7 @@ header {
         padding: 0;
         li {
             display: inline-block;
-            vertical-align: top;
+            vertical-align: middle;
         }
     }
     .notifications {
