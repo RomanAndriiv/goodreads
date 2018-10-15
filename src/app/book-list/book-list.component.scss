@@ -1,9 +1,21 @@
-.app-book-list {
+main {
     display: flex;
+    padding: 25px 40px;
 }
 .books {
     border-collapse: collapse;
+    flex: 50%;
+    margin-right: 30px;
     img {
-        max-height: 150px;
+        display: block;
+        width: 80px;
+    }
+    tr {
+        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
+    }
+    .field {
+        padding: 12px;
+        vertical-align: middle;
     }
 }
