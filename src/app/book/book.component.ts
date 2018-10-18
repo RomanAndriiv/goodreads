@@ -30,7 +30,7 @@ export class BookComponent implements OnInit {
     this.bookService.selectedBook = {
       $key: null,
       author: '',
-      avr_rat: 0,
+      avrRat: 0,
       cover: '',
       title: '',
     }

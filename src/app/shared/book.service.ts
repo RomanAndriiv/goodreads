@@ -19,7 +19,7 @@ export class BookService {
   insertBook(book:Book){
     this.bookList.push({
       author : book.author,
-      avr_rat : book.avr_rat,
+      avrRat : book.avrRat,
       cover : book.cover,
       title : book.title
     });
@@ -28,7 +28,7 @@ export class BookService {
   updateBook(book : Book){
     this.bookList.update(book.$key, {
       author : book.author,
-      avr_rat : book.avr_rat,
+      avrRat : book.avrRat,
       title : book.title,
       cover : book.cover
     })

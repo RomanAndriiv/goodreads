@@ -1,7 +1,7 @@
 export class Book {
     $key : string;
     author : string;
-    avr_rat : number;
+    avrRat : number;
     cover : string;
     title : string;
 };
