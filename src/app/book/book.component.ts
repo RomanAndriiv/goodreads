@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { Router } from '@angular/router';
 import { BookService } from '../shared/book.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BookService } from '../shared/book.service';
 })
 export class BookComponent implements OnInit {
 
-  constructor(private bookService : BookService) { }
+  constructor(private bookService : BookService, private router : Router) { }
 
   ngOnInit() {
     this.resetForm();
@@ -41,6 +41,10 @@ export class BookComponent implements OnInit {
       this.bookService.deleteBook(form.value.$key);
       this.resetForm(form);
     }
+  }
+
+  viewBook(bookService : BookService){
+    this.router.navigate(['/my-books', bookService.selectedBook.$key])
   }
 
 }

@@ -14,7 +14,9 @@ import { BookComponent } from './book/book.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { MyBooksComponent } from './my-books/my-books.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HomeComponent } from './home/home.component'
     BookComponent,
     BookListComponent,
     MyBooksComponent,
-    HomeComponent
+    HomeComponent,
+    BookDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { HomeComponent } from './home/home.component'
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'my-books', component: BookListComponent}
+      { path: 'my-books', component: BookListComponent},
+      { path: 'my-books/:id', component: BookDetailComponent},
+      { path: '**', component: PageNotFoundComponent}
     ]),
     AppRoutingModule
   ],

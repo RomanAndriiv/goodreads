@@ -20,5 +20,6 @@
     <button type="submit" class="btn btn-default" [disabled]="!bookForm.valid">Submit</button>
     <button type="button" class="btn btn-default" *ngIf="bookService.selectedBook.$key != null" (click)="onDelete(bookForm)">Delete</button>
     <button type="button" class="btn btn-default" (click)="resetForm(bookForm)">Reset</button>
+    <button type="button" class="btn btn-default" *ngIf="bookService.selectedBook.$key != null" (click)="viewBook(bookService)">View</button>
   </div>
 </form>
