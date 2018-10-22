@@ -16,7 +16,8 @@ import { MyBooksComponent } from './my-books/my-books.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DefaultImagePipe } from './default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MyBooksComponent,
     HomeComponent,
     BookDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

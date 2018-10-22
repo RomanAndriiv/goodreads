@@ -3,7 +3,7 @@
     <div class="book_block">
       <div class="book_details">
         <div class="book_image">
-          <img src="{{selectedBook.cover}}" alt="">
+          <img src="{{selectedBook.cover | defaultImage:'https://tse2.mm.bing.net/th?id=OIP.t07FMc4JqgAFPHymMhD87gHaEK&pid=15.1&P=0&w=270&h=153':true}}" alt="">
         </div>
         <div class="text">
           <div class="book_title">{{selectedBook.title}}</div>
